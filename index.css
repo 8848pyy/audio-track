@@ -1,0 +1,97 @@
+#navbar {  
+    background-color:black; /* 可选：为整个导航栏设置背景色 */  
+    padding: 3px;  
+}  
+  
+#navbar ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    justify-content: space-around;  
+}  
+  
+.nav-link {  
+    display: inline-block;  
+    padding: 10px 30px; /* 添加内边距以创建背景框 */  
+    background-color: rgb(0, 0, 0); /* 设置背景色 */  
+    color: white;  
+    text-decoration: none;  
+    margin-right: 5px; /* 可选：链接之间添加一些间隔 */  
+    transition: background-color 0.3s ease; /* 添加过渡效果，使背景色变化更平滑 */  
+}  
+  
+.nav-link:hover { /* 链接悬停时改变背景色 */  
+    background-color: white;  
+    color: black;  
+}  
+  
+/* 初始高亮样式（可选） */  
+.nav-link.active {  
+    background-color: white;  
+    color: black;   
+}
+
+/*中间 */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+#main_maid img {
+    width: 800px;
+    height: auto;
+    
+}
+
+#chossefile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 左对齐视频和按钮容器 */
+    padding: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* 两个按钮之间留出空间 */
+    width: 100%; /* 确保占满宽度 */
+}
+
+.button-file {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    margin: 10px 0; /* 添加上下间距 */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-style {
+    width: 100px;
+    height: 40px;
+    background-color: #90c2f7;
+    border: 1px solid #ffffff;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    margin: 10px 0; /* 添加上下间距 */
+    padding: auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+#videoPlayer{
+    width: 800px;
+    height: auto;
+}
+

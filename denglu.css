@@ -1,0 +1,112 @@
+#navbar {  
+    background-color:black; /* 可选：为整个导航栏设置背景色 */  
+    padding: 3px;  
+}  
+  
+#navbar ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    justify-content: space-around;  
+}  
+  
+.nav-link {  
+    display: inline-block;  
+    padding: 10px 30px; /* 添加内边距以创建背景框 */  
+    background-color: rgb(0, 0, 0); /* 设置背景色 */  
+    color: white;  
+    text-decoration: none;  
+    margin-right: 5px; /* 可选：链接之间添加一些间隔 */  
+    transition: background-color 0.3s ease; /* 添加过渡效果，使背景色变化更平滑 */  
+}  
+  
+.nav-link:hover { /* 链接悬停时改变背景色 */  
+    background-color: white;  
+    color: black;  
+}  
+  
+/* 初始高亮样式（可选） */  
+.nav-link.active {  
+    background-color: white;  
+    color: black;   
+}
+/* 设置图片横幅样式 */  
+.activity-banner img {  
+    width: 100%; /* 使得图片宽度与包含它的div元素宽度一致 */  
+    height: auto; /* 保持图片的原始宽高比 */  
+}
+/* styles.css */  
+  
+.activity-banner {  
+    position: relative; /* 允许子元素绝对定位 */  
+    /* 其他样式 */  
+}
+
+/* 中间区域 */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+#main_maid img {
+    width: 800px;
+    height: auto;
+    
+}
+
+#verification {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.yanzheng {
+    width: 200px;
+    height: 40px;
+    background-color: #90c2f7;
+    border: #ffffff;
+    text-align: center;
+    line-height: 40px; /* 垂直居中文本 */
+    display: block; /* 将按钮显示为块级元素 */
+    margin: 0 auto; /* 水平居中 */
+    font-size: 16px; /* 设置按钮字体大小 */
+}
+
+input[type="text"] {
+    width: 300px; /* 设置输入框的宽度 */
+    height: 40px; /* 设置输入框的高度 */
+    font-size: 16px; /* 设置输入框文字的字体大小 */
+    padding: 8px; /* 设置输入框的内边距 */
+    margin-bottom: 10px; /* 设置输入框与下一个元素之间的距离 */
+}
+#show{
+    margin-top: 20px;
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 水平间距平均分布 */
+    width: auto; /* 可以根据需要设置宽度 */
+    margin-bottom: 10px; /* 设置和下一个元素的间距 */
+
+}
+#show button{
+    
+    height: 30px;
+    background-color: #eee;
+    border: black solid 1px;
+    border-radius: 10px;
+    font-size: 10px;
+    
+}
+
+#code{
+    width: 50%;
+    background:#eee;
+    font-size: 25px;
+    margin-right: 6px;
+    color: blue;
+    cursor: pointer;
+}

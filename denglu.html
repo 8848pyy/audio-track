@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <meta charset="UTF-8">
+    <title >视频分析</title>
+    <link rel="stylesheet" href="denglu.css">
+    </head>
+<body>
+<nav id="navbar">  
+    <ul>  
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="video_analysis.html" class="nav-link">视频分析</a></li>
+        <li><a href="denglu.html" class="nav-link">登录</a></li>
+        <li><a href="register.html" class="nav-link">注册</a></li>
+    </ul>  
+</nav>  
+<script src="script.js"></script>
+<div id="main">
+    <ul id="main_maid">
+        <li><img src="file:///F:/作业文件/大三项目案例/website/image/dl.jpg" ></li>
+    </ul>
+    
+    <div id="verification">
+        <h1>手机短信验证码登录</h1>
+        <input type="text" id="shouji" placeholder="请输入手机号">
+        <br>
+        <div id="show">
+            <div id="code"></div>
+            <button id="change">看不清，换一张</button>
+        </div>
+        
+        <br>
+        <input type="text" id="checkCode" placeholder="请输入验证码">
+        <br>
+        <button id="confirm" class="yanzheng">登录</button>
+        <br>
+        <button id="zhucebt" class="yanzheng">注册</button>
+        
+        
+    </div>
+</div>  
+</body>
+</html>
+<script>
+window.onload = function(){
+    var s = getCode();
+    function getCode(){
+        var array = ['1','2','3','4','5','6','7','8','9','a','b','c','e','f',
+                     'g','h','i','j','k','l','m','n','u','v','w','h','y','z',
+                     'o','p','q','r','s','t',
+                     'A','B','C','D','E','F','G','H','I','J','K','L','M','N',
+                     'O','P','Q','R','S','T','U','V','W','X','Y','Z'
+    ];
+        var str = '';
+        for(let i = 0; i < 4; i++)
+        {
+            var index = parseInt((Math.random()*60));
+            str+=array[index];
+        }
+        return str;
+    }
+    document.getElementById('code').innerText = s;
+
+    document.getElementById('change').onclick = function(){
+            document.getElementById('code').innerText = getCode();
+    }
+
+    document.getElementById('confirm').onclick = function(){
+        var x = document.getElementById('checkCode').value;
+        var y = document.getElementById('code').innerText;
+        var phonenumber = document.getElementById('shouji').value.trim();
+        if(x !== y || phonenumber.length !== 11 || isNaN(phonenumber)){
+            alert("格式输入错误");
+            document.getElementById('checkCode').value = '';
+        }
+              
+        else
+        {
+            window.location.href = '1.html';
+        }
+    }
+
+    document.getElementById('zhucebt').onclick = function(){
+        window.location.href = 'zhuce.html';
+    }
+}
+</script>
