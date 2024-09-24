@@ -20,6 +20,21 @@ def video_analysis():
 def static_files(filename):
     return send_from_directory('static', filename)
 
+@app.route('/uploads/<path:filename>')
+def uploaded_file(filename):
+    return send_from_directory('uploads', filename)
+
+@app.route('/denglu')
+def denglu():
+    return render_template('denglu.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+
+
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     if 'video' not in request.files:
