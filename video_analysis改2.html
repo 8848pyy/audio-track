@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>视频分析</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <script src="{{ url_for('static', filename='sprit.js') }}"></script>
+    <nav id="navbar">
+        <ul>
+            <li><a href="{{ url_for('home') }}" class="nav-link">首页</a></li>
+            <li><a href="{{ url_for('video_analysis') }}" class="nav-link">视频分析</a></li>
+            <li><a href="{{ url_for('denglu') }}" class="nav-link">登录</a></li>
+            <li><a href="{{ url_for('register') }}" class="nav-link">注册</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="main">
+        <h1>视频分析</h1>
+        <div id="chossefile">
+            <video id="videoPlayer" controls style=" align-items: center; "></video>
+            <div class="button-container">
+                <label for="videoUpload" class="button-file">选择文件</label>
+                <input type="file" id="videoUpload" accept="video/*" style="display: none; ">
+                <button class="button-style">分析视频</button>
+            </div>
+            <br>
+            <canvas id="canvas"></canvas>
+            <div id="analysisResult">
+
+                <h3 id="statusText">请选择视频进行解析</h3>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+                <img id="last_person_frame" src="" alt="" style="width: 800px; height: auto; align-items: center;" >
+
+                <h3>检测到的人脸图像:</h3>
+                <div id="faceImagesContainer"></div> <!-- 用于显示人脸图像 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
